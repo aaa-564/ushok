@@ -1,1 +1,34 @@
+Задача 1
+#include <iostream>
+#include <map>
+#include <vector>
+#include <string>
 
+int main() {
+    // Создаем словарь
+    std::map<std::string, std::string> student;
+    student["name"] = "Артём";
+    student["age"] = "19";
+    student["courses"] = "математика, информатика"; // Storing courses as a single string for simplicity
+
+    // Добавляем новый ключ-значение
+    student["grade"] = "4";
+
+    // Выводим словарь
+    for (const auto& pair : student) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+
+    // Изменяем значение по ключу
+    student["age"] = "19";
+
+    // Удаляем ключ-значение
+    student.erase("grade");
+
+    // Выводим обновленный словарь
+    for (const auto& pair : student) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+
+    return 0;
+}
