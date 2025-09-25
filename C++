@@ -55,3 +55,35 @@ int main() {
     }
     return 0;
 }
+
+стек
+#include <iostream>
+#include <stack>
+
+int main() {
+    // 1. Создание стека
+    std::stack<int> myStack;
+
+    // 2. Добавление элементов в стек (push)
+    myStack.push(10);
+    myStack.push(20);
+    myStack.push(30);
+
+    std::cout << "Элементы стека (сверху вниз):" << std::endl;
+
+    // 3. Извлечение и вывод элементов из стека (pop)
+    while (!myStack.empty()) {
+        // Получаем верхний элемент
+        int topElement = myStack.top();
+        std::cout << topElement << std::endl;
+        // Удаляем верхний элемент
+        myStack.pop();
+    }
+
+    // Проверка на пустоту стека
+    if (myStack.empty()) {
+        std::cout << "Стек пуст." << std::endl;
+    }
+
+    return 0;
+}
