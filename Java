@@ -31,3 +31,42 @@ public class SumOfNumbers {
         System.out.println("Сумма чисел от 1 до 100: " + sum);
     }
 }
+
+
+стек
+import java.util.Stack; // Импортируем класс Stack
+
+public class StackExample {
+
+    public static void main(String[] args) {
+        // 1. Создание стека:
+        Stack<Integer> stack = new Stack<Integer>(); // Создаем стек для хранения целых чисел
+
+        // 2. Добавление элементов (push):
+        stack.push(10); // Добавляем 10 на вершину стека
+        stack.push(20); // Добавляем 20 на вершину стека
+        stack.push(30); // Добавляем 30 на вершину стека
+        System.out.println("Стек после добавления: " + stack); // Вывод: [10, 20, 30]
+
+        // 3. Получение верхнего элемента без удаления (peek):
+        Integer topElement = stack.peek(); // Получаем элемент с вершины, но не удаляем его
+        System.out.println("Верхний элемент (peek): " + topElement); // Вывод: 30
+        System.out.println("Стек после peek: " + stack); // Стек не изменился: [10, 20, 30]
+
+        // 4. Удаление верхнего элемента (pop):
+        Integer poppedElement = stack.pop(); // Удаляем и получаем элемент с вершины
+        System.out.println("Удаленный элемент (pop): " + poppedElement); // Вывод: 30
+        System.out.println("Стек после pop: " + stack); // Вывод: [10, 20]
+
+        // 5. Проверка пустоты стека (isEmpty):
+        boolean isEmpty = stack.isEmpty(); // Проверяем, пуст ли стек
+        System.out.println("Стек пуст? (isEmpty): " + isEmpty); // Вывод: false
+
+        // 6. Удаление всех элементов:
+        while (!stack.isEmpty()) {
+            System.out.println("Удаляем: " + stack.pop());
+        }
+        System.out.println("Стек после удаления всех элементов: " + stack); // Вывод: []
+        System.out.println("Стек пуст после удаления всех элементов? (isEmpty): " + stack.isEmpty()); // Вывод: true
+    }
+}
